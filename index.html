@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shaheen Alladin · Acropora Data — Digital Business Hub</title>
+  <meta name="description" content="Shaheen Alladin, Founder & Data Management Expert chez Acropora Data. Master Data Management, Data Governance, Data Quality et fondations de données pour l'IA.">
+  <meta name="theme-color" content="#0F6170">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Shaheen Alladin · Acropora Data">
+  <meta property="og:description" content="Founder & Data Management Expert — Data Foundation for AI">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preload" href="assets/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Icônes (sprite SVG, trait fin comme sur les supports Acropora) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-mdm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.6"/><circle cx="12" cy="3.5" r="1.4"/><circle cx="12" cy="20.5" r="1.4"/><circle cx="4" cy="7.5" r="1.4"/><circle cx="20" cy="7.5" r="1.4"/><circle cx="4" cy="16.5" r="1.4"/><circle cx="20" cy="16.5" r="1.4"/><path d="M12 5v4.4M12 14.6V19M5.2 8.2l4.6 2.6M18.8 8.2l-4.6 2.6M5.2 15.8l4.6-2.6M18.8 15.8l-4.6-2.6"/></symbol>
+    <symbol id="i-gov" viewBox="0 0 24 24"><path d="M12 2.8 19.5 6v5.6c0 4.6-3.2 8.3-7.5 9.6-4.3-1.3-7.5-5-7.5-9.6V6z"/><path d="m8.6 12 2.4 2.4 4.4-4.6"/></symbol>
+    <symbol id="i-quality" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16.2 16.2 4.3 4.3"/><path d="m7.8 11.2 2.2 2.2 4-4.2"/></symbol>
+    <symbol id="i-integration" viewBox="0 0 24 24"><rect x="2.8" y="3.5" width="6.5" height="5.5" rx="1.2"/><rect x="14.7" y="15" width="6.5" height="5.5" rx="1.2"/><path d="M9.3 6.3h4.2a2.5 2.5 0 0 1 2.5 2.5V15"/><path d="m13.8 12.8 2.2 2.2 2.2-2.2"/><path d="M14.7 17.7h-4.2A2.5 2.5 0 0 1 8 15.2V9"/></symbol>
+    <symbol id="i-lineage" viewBox="0 0 24 24"><ellipse cx="6.5" cy="5" rx="3.7" ry="1.6"/><path d="M2.8 5v3.4c0 .9 1.7 1.6 3.7 1.6s3.7-.7 3.7-1.6V5"/><path d="M6.5 10v4.5a3 3 0 0 0 3 3h3"/><rect x="12.5" y="14.5" width="8.7" height="6" rx="1.2"/><path d="M15 17.5h3.7"/></symbol>
+    <symbol id="i-ai" viewBox="0 0 24 24"><path d="M12 3.2 13.8 8a2 2 0 0 0 1.2 1.2l4.8 1.8-4.8 1.8a2 2 0 0 0-1.2 1.2L12 18.8 10.2 14A2 2 0 0 0 9 12.8L4.2 11 9 9.2A2 2 0 0 0 10.2 8z"/><path d="M19 2.8v3M17.5 4.3h3M5 17.6v3M3.5 19.1h3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.8" y="5" width="18.4" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.4 8.5-6.4"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M3.6 20.4 4.8 16A8.6 8.6 0 1 1 8 19.2z"/><path d="M9 8.1c.2-.4.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .5-.1.6l-.5.6c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.6-.5c.2-.2.4-.2.6-.1l1.6.7c.3.1.4.3.4.5v.5c0 .3-.1.6-.5.8-.5.3-1.2.5-1.9.3-2.6-.7-4.6-2.7-5.3-5.3-.2-.7 0-1.4.4-1.9z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="2.8" y="2.8" width="18.4" height="18.4" rx="3"/><path d="M7.6 10.2v6.6M7.6 7.2v.1M11.4 16.8v-6.6M11.4 13c0-1.6 1.1-2.9 2.6-2.9s2.4 1 2.4 2.7v4"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.4 2.5 3.6 5.6 3.6 9.2s-1.2 6.7-3.6 9.2c-2.4-2.5-3.6-5.6-3.6-9.2S9.6 5.3 12 2.8z"/></symbol>
+    <symbol id="i-vcard" viewBox="0 0 24 24"><rect x="2.8" y="4.5" width="18.4" height="15" rx="2"/><circle cx="8.6" cy="10.6" r="2.1"/><path d="M5.3 16c.5-1.6 1.8-2.5 3.3-2.5s2.8.9 3.3 2.5M14.3 9.5h4M14.3 12.5h4M14.3 15.5h2.5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3.5v11.5M7.4 10.6 12 15.2l4.6-4.6"/><path d="M4 16.5v2.2A1.8 1.8 0 0 0 5.8 20.5h12.4a1.8 1.8 0 0 0 1.8-1.8v-2.2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h15M14 6.5l5.5 5.5-5.5 5.5"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19.5v-15M6.5 10 12 4.5l5.5 5.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4.8" width="18" height="16" rx="2"/><path d="M3 9.8h18M8 2.8v4M16 2.8v4"/></symbol>
+    <symbol id="i-teams" viewBox="0 0 24 24"><rect x="2.8" y="6" width="11.4" height="11.4" rx="2"/><path d="M5.8 9.2h5.4M8.5 9.2v5.4"/><circle cx="18.2" cy="6.8" r="2.2"/><path d="M14.2 10.4h5.2a1.8 1.8 0 0 1 1.8 1.8v3.2a3.3 3.3 0 0 1-5.4 2.5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.8-6.1-6.8-11.2a6.8 6.8 0 0 1 13.6 0C18.8 14.9 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<!-- ============ EN-TÊTE ============ -->
+<header class="topbar" id="top">
+  <div class="container topbar__inner">
+    <a class="topbar__logo" href="#top" aria-label="Acropora Data">
+      <img src="assets/img/logo-white-coral.png" alt="Acropora Data" class="logo-on-dark" width="200" height="43">
+      <img src="assets/img/logo-teal.png" alt="Acropora Data" class="logo-on-light" width="200" height="43">
+    </a>
+    <nav class="topbar__nav" id="site-nav" aria-label="Navigation principale">
+      <a href="#about" data-i18n="nav.about"></a>
+      <a href="#expertise" data-i18n="nav.expertise"></a>
+      <a href="#services" data-i18n="nav.services"></a>
+      <a href="#approach" data-i18n="nav.approach"></a>
+      <a href="#contact" data-i18n="nav.contact"></a>
+    </nav>
+    <div class="topbar__actions">
+      <a class="btn btn--coral btn--sm topbar__book" data-href="booking" target="_blank" rel="noopener"><svg class="ico"><use href="#i-calendar"/></svg><span data-i18n="nav.book"></span></a>
+      <div class="lang-switch" role="group" aria-label="Langue / Language" id="lang-switch"></div>
+      <button class="burger" id="burger" aria-controls="site-nav" aria-expanded="false">
+        <span></span><span></span><span class="sr-only" data-i18n="nav.menu"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ 1. HERO ============ -->
+  <section class="hero" aria-labelledby="hero-name">
+    <div class="hero__waves" aria-hidden="true"></div>
+    <div class="hero__ring" aria-hidden="true"></div>
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow eyebrow--coral"><span class="eyebrow__bar"></span><span data-i18n="hero.eyebrow"></span></p>
+        <p class="hero__company">ACROPORA DATA</p>
+        <h1 class="hero__name" id="hero-name">Shaheen Alladin</h1>
+        <p class="hero__role" data-i18n="hero.role"></p>
+        <blockquote class="hero__quote"><p data-i18n="hero.quote"></p></blockquote>
+        <p class="hero__intro" data-i18n="hero.intro"></p>
+        <div class="hero__ctas">
+          <a class="btn btn--coral" href="#expertise"><span data-i18n="hero.ctaExpertise"></span><svg class="ico"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--light" href="#contact" data-i18n="hero.ctaContact"></a>
+          <a class="btn btn--ghost" data-href="linkedin" target="_blank" rel="noopener"><svg class="ico"><use href="#i-linkedin"/></svg><span data-i18n="hero.ctaLinkedin"></span></a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <figure class="portrait">
+          <div class="portrait__frame">
+            <img class="portrait__img" id="portrait-img" alt="" data-i18n-alt="hero.photoAlt">
+            <div class="portrait__fallback" aria-hidden="true">SA</div>
+          </div>
+          <figcaption class="portrait__tag">
+            <strong>Shaheen Alladin</strong>
+            <span data-i18n="hero.role"></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Bandeau événement (masqué automatiquement après la date) -->
+    <div class="container">
+      <a class="event-strip" id="event-strip" data-href="booking" target="_blank" rel="noopener" hidden>
+        <span class="event-strip__live"><span class="dot"></span><span data-i18n="event.label"></span></span>
+        <span class="event-strip__text" data-i18n="event.text"></span>
+        <span class="event-strip__cta"><span data-i18n="event.cta"></span><svg class="ico"><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ 2. À PROPOS ============ -->
+  <section class="section section--light" id="about" aria-labelledby="about-title">
+    <div class="container about">
+      <div class="about__main">
+        <p class="eyebrow"><span class="eyebrow__bar"></span><span data-i18n="about.kicker"></span></p>
+        <h2 class="h2" id="about-title" data-i18n="about.title"></h2>
+        <div class="about__text" data-render="about-paragraphs"></div>
+        <a class="link-arrow" data-href="website" target="_blank" rel="noopener"><span data-i18n="about.websiteCta"></span><svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+      <aside class="about__pillars">
+        <p class="pillars__title" data-i18n="about.pillarsTitle"></p>
+        <ol class="pillars" data-render="about-pillars"></ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ 3. EXPERTISES ============ -->
+  <section class="section" id="expertise" aria-labelledby="expertise-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow"><span class="eyebrow__bar"></span><span data-i18n="expertise.kicker"></span></p>
+        <h2 class="h2" id="expertise-title" data-i18n="expertise.title"></h2>
+        <p class="lead" data-i18n="expertise.lead"></p>
+      </header>
+      <div class="cards" data-render="expertise"></div>
+    </div>
+  </section>
+
+  <!-- ============ 4. SERVICES ============ -->
+  <section class="section section--light" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow"><span class="eyebrow__bar"></span><span data-i18n="services.kicker"></span></p>
+        <h2 class="h2" id="services-title" data-i18n="services.title"></h2>
+        <p class="lead" data-i18n="services.lead"></p>
+      </header>
+      <div class="services" data-render="services"></div>
+    </div>
+  </section>
+
+  <!-- ============ 5. APPROCHE ============ -->
+  <section class="section" id="approach" aria-labelledby="approach-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow"><span class="eyebrow__bar"></span><span data-i18n="approach.kicker"></span></p>
+        <h2 class="h2" id="approach-title" data-i18n="approach.title"></h2>
+        <p class="lead" data-i18n="approach.lead"></p>
+      </header>
+      <ol class="steps" data-render="steps"></ol>
+    </div>
+  </section>
+
+  <!-- ============ 6. INDICATEURS ============ -->
+  <section class="figures" aria-labelledby="figures-title">
+    <div class="figures__waves" aria-hidden="true"></div>
+    <div class="container">
+      <header class="section__head section__head--dark">
+        <p class="eyebrow eyebrow--coral"><span class="eyebrow__bar"></span><span data-i18n="figures.kicker"></span></p>
+        <h2 class="h2" id="figures-title" data-i18n="figures.title"></h2>
+      </header>
+      <ul class="figures__grid" data-render="figures"></ul>
+    </div>
+  </section>
+
+  <!-- ============ 7. ÎLE MAURICE ============ -->
+  <section class="section section--light" aria-labelledby="mu-title">
+    <div class="container mu">
+      <div class="mu__map">
+        <img src="assets/img/mauritius.png" alt="" data-i18n-alt="mauritius.mapAlt" width="446" height="520">
+      </div>
+      <div class="mu__text">
+        <p class="eyebrow"><span class="eyebrow__bar"></span><span data-i18n="mauritius.kicker"></span></p>
+        <h2 class="h2" id="mu-title" data-i18n="mauritius.title"></h2>
+        <p class="lead" data-i18n="mauritius.lead"></p>
+        <ul class="mu__list" data-render="mauritius"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. CONTACT ============ -->
+  <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow"><span class="eyebrow__bar"></span><span data-i18n="contact.kicker"></span></p>
+        <h2 class="h2" id="contact-title" data-i18n="contact.title"></h2>
+        <p class="lead" data-i18n="contact.lead"></p>
+      </header>
+
+      <!-- Réservation d'un créneau (Microsoft Bookings) -->
+      <a class="booking" data-href="booking" target="_blank" rel="noopener">
+        <span class="booking__icon"><svg class="ico"><use href="#i-calendar"/></svg></span>
+        <span class="booking__body">
+          <span class="booking__badge"><svg class="ico"><use href="#i-teams"/></svg><span data-i18n="contact.booking.badge"></span></span>
+          <strong class="booking__title" data-i18n="contact.booking.title"></strong>
+          <span class="booking__text" data-i18n="contact.booking.text"></span>
+        </span>
+        <span class="btn btn--coral booking__cta"><span data-i18n="contact.booking.cta"></span><svg class="ico"><use href="#i-arrow"/></svg></span>
+      </a>
+
+      <div class="contact">
+        <!-- Carte de visite -->
+        <div class="bizcard">
+          <div class="bizcard__head">
+            <div class="bizcard__avatar">
+              <img id="avatar-img" alt="">
+              <span aria-hidden="true">SA</span>
+            </div>
+            <div>
+              <p class="bizcard__name">Shaheen Alladin</p>
+              <p class="bizcard__role" data-i18n="hero.role"></p>
+              <img class="bizcard__logo" src="assets/img/logo-white-coral.png" alt="Acropora Data" width="150" height="32">
+            </div>
+          </div>
+          <ul class="bizcard__list">
+            <li><a data-href="booking" target="_blank" rel="noopener"><svg class="ico ico--accent"><use href="#i-calendar"/></svg><span><strong data-i18n="contact.actions.book"></strong><small data-i18n="contact.actions.bookHint"></small></span></a></li>
+            <li><a data-href="email"><svg class="ico"><use href="#i-mail"/></svg><span><strong data-i18n="contact.actions.email"></strong><small data-text="email"></small></span></a></li>
+            <li><a data-href="whatsapp" target="_blank" rel="noopener"><svg class="ico"><use href="#i-whatsapp"/></svg><span><strong data-i18n="contact.actions.whatsapp"></strong><small data-text="phoneDisplay"></small></span></a></li>
+            <li><a data-href="linkedin" target="_blank" rel="noopener"><svg class="ico"><use href="#i-linkedin"/></svg><span><strong data-i18n="contact.actions.linkedin"></strong><small>linkedin.com/in/shaheen-alladin</small></span></a></li>
+            <li><a data-href="website" target="_blank" rel="noopener"><svg class="ico"><use href="#i-globe"/></svg><span><strong data-i18n="contact.actions.website"></strong><small data-text="websiteLabel"></small></span></a></li>
+          </ul>
+          <div class="bizcard__primary">
+            <a class="btn btn--coral btn--block" data-href="vcard" download="Shaheen-Alladin_Acropora-Data.vcf"><svg class="ico"><use href="#i-vcard"/></svg><span data-i18n="contact.actions.vcard"></span></a>
+            <a class="btn btn--light btn--block" data-href="presentation" download><svg class="ico"><use href="#i-download"/></svg><span data-i18n="contact.actions.deck"></span></a>
+          </div>
+        </div>
+
+        <!-- Formulaire -->
+        <form class="form" id="contact-form" novalidate>
+          <h3 class="form__title" data-i18n="contact.form.title"></h3>
+          <div class="form__row">
+            <label class="field"><span data-i18n="contact.form.name"></span><input type="text" name="name" autocomplete="name" required></label>
+            <label class="field"><span data-i18n="contact.form.company"></span><input type="text" name="company" autocomplete="organization"></label>
+          </div>
+          <div class="form__row">
+            <label class="field"><span data-i18n="contact.form.email"></span><input type="email" name="email" autocomplete="email" required></label>
+            <label class="field"><span data-i18n="contact.form.topic"></span><select name="topic" data-render="topics"></select></label>
+          </div>
+          <label class="field"><span data-i18n="contact.form.message"></span><textarea name="message" rows="5" required data-i18n-placeholder="contact.form.messagePlaceholder"></textarea></label>
+          <label class="check"><input type="checkbox" name="consent" required><span data-i18n="contact.form.consent"></span></label>
+          <p class="form__msg" id="form-msg" role="status" aria-live="polite"></p>
+          <div class="form__actions">
+            <button type="submit" class="btn btn--teal" value="email"><svg class="ico"><use href="#i-mail"/></svg><span data-i18n="contact.form.sendEmail"></span></button>
+            <button type="submit" class="btn btn--outline" value="whatsapp"><svg class="ico"><use href="#i-whatsapp"/></svg><span data-i18n="contact.form.sendWhatsapp"></span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ PIED DE PAGE ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="assets/img/logo-white-coral.png" alt="Acropora Data" width="170" height="37">
+      <p data-i18n="footer.tagline"></p>
+    </div>
+    <ul class="footer__links">
+      <li><a data-href="website" target="_blank" rel="noopener" data-text="websiteLabel"></a></li>
+      <li><a data-href="linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a data-href="email" data-text="email"></a></li>
+    </ul>
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> Acropora Data Ltd. <span data-i18n="footer.rights"></span></p>
+      <a href="#top" class="footer__top"><span data-i18n="footer.backToTop"></span><svg class="ico"><use href="#i-up"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Barre d'action mobile (accès direct au contact) -->
+<nav class="quickbar" aria-label="Contact rapide">
+  <a data-href="email" aria-label="E-mail"><svg class="ico"><use href="#i-mail"/></svg></a>
+  <a data-href="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ico"><use href="#i-whatsapp"/></svg></a>
+  <a data-href="booking" target="_blank" rel="noopener" aria-label="Agenda / Booking"><svg class="ico"><use href="#i-calendar"/></svg></a>
+  <a class="quickbar__main" data-href="vcard" download="Shaheen-Alladin_Acropora-Data.vcf"><svg class="ico"><use href="#i-vcard"/></svg><span data-i18n="contact.actions.vcardShort"></span></a>
+</nav>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
